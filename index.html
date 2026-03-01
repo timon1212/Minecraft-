@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft AI Asset Generator</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h1>Minecraft AI Asset Generator</h1>
+  <input type="text" id="prompt" placeholder="Enter item/block/crop description...">
+  <select id="type">
+    <option value="item">Item</option>
+    <option value="block">Block</option>
+    <option value="sword">Sword</option>
+    <option value="pickaxe">Pickaxe</option>
+    <option value="axe">Axe</option>
+    <option value="armor">Armor</option>
+    <option value="crop">Crop</option>
+    <option value="mob">Mob</option>
+  </select>
+  <select id="style">
+    <option value="vanilla">Vanilla</option>
+    <option value="rpg">RPG</option>
+    <option value="futuristic">Futuristic</option>
+  </select>
+  <button id="generateBtn">Generate</button>
+  
+  <h2>2D Preview</h2>
+  <canvas id="previewCanvas" width="256" height="256"></canvas>
+
+  <h2>3D Preview</h2>
+  <div id="threeContainer" style="width:256px;height:256px;margin:10px auto;"></div>
+
+  <h2>Item Queue</h2>
+  <ul id="itemQueue"></ul>
+  <button id="downloadAllBtn">Download All Items as Resource Pack</button>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
